@@ -436,7 +436,10 @@ function multifungsi(){
   </div>`;
   setTimeout(() => {
     document.getElementById('Content').insertAdjacentHTML('beforeend', flowerHTML);
-	  window.scrollTo(0, document.body.scrollHeight);
+	  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  });
   }, 20000);
   console.log(document.getElementById('Content'));
     }
